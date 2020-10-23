@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+
+		<!-- Font Awesome -->
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+		/>
+		<!-- Bootstrap core CSS -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css"
+			rel="stylesheet"
+		/>
+		<!-- Material Design Bootstrap -->
+		<link
+			href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.10.1/css/mdb.min.css"
+			rel="stylesheet"
+		/>
+	</head>
+	<body>
+		<nav class="navbar navbar-dark bg-dark">
+			<!-- Navbar content -->
+			<a class="navbar-brand" href="/">RegexU</a>
+		</nav>
+		<div class="container py-4">
+			<form method="POST" action="/result">
+				<div class="form-group">
+					<h4 class="mb-3">Regular Expression Tester</h4>
+					<hr />
+					<label>Regular Expression</label>
+					<input
+						name="regex"
+						class="form-control"
+						id="regexInput"
+						placeholder="Insert your regular expression here"
+						required
+					/>
+				</div>
+				<div class="form-group">
+					<label>Test String</label>
+					<textarea
+						name="test_str"
+						class="form-control"
+						id="stringInput"
+						rows="7"
+						placeholder="Insert your test string here"
+						required
+					></textarea>
+				</div>
+				<button
+					id="reveal"
+					onclick="sendTheAjax()"
+					type="submit"
+					class="btn btn-primary"
+				>
+					Submit
+				</button>
+				<div id="ajax-content"></div>
+			</form>
+		</div>
+
+		<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+		<script src="https://unpkg.com/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"></script>
+	</body>
+</html>
