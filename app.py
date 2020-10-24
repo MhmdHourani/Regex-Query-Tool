@@ -16,7 +16,7 @@ def result():
         text = request.form['test_str']
         result = regex_query(query, text)
         if result == ([], []):
-            print(result3)
+            print(result)
         # if not any(result):
         #     # print("This is the result inside the len() and it is empty")
         #     return "Sorry there no result, try again"
